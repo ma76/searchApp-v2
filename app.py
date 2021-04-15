@@ -3,8 +3,9 @@ import os
 # import glob
 import shutil
 import pandas as pd
-# from openpyxl.workbook import Workbook
 import easygui
+from scripts.create import  create_files
+from scripts.remove import remove_all_files
 
 # CONST
 OUTPUT_DIR = os.getcwd()
@@ -82,8 +83,9 @@ def create_report_file(dir_info):
 
 
 if __name__ == '__main__':
-    root_dir = r'test'
+    root_dir = r'output'
     output_dir = root_dir # or change if you want
+    create_files(root_dir)
     my_files =[]
     for (file_path,_,file_names) in os.walk(root_dir):
         for path in file_names:
