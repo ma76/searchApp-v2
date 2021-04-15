@@ -15,14 +15,11 @@ def get_random_filename(ext):
     return f"other__{get_random_string()}"
 
 def create_files(root="./output", extensions=['pdf', 'mkv', 'mp3'], count=5):
-    # TODO: use built in functionality python
     if not os.path.exists(root):
         os.makedirs(root)
     for _ in range(count):
         ext = get_random_ext(extensions)
         filename = get_random_filename(ext)
-        # TODO: use built in functionality python
-        # TODO; use path.join
         with open(f'{root}/{filename}.{ext}', 'w') as fp:
             pass
     

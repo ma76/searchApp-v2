@@ -1,5 +1,4 @@
-#  remove all files in test directory
-# TODO: change test dir name to outputs
+#  remove all files in output directory
 import os
 import glob
 import shutil
